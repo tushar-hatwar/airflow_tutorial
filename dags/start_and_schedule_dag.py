@@ -11,6 +11,7 @@ default_args = {
     'retry_delay': timedelta(seconds = 20)
     
 }
+# comment added here
 # "*/1 * * * *" to run at every minute
 with DAG(dag_id='start_and_schedule_dag', schedule_interval="@daily", default_args=default_args, catchup=False) as dag:
     
